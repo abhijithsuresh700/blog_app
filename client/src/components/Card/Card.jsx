@@ -9,7 +9,7 @@ const Card = (articles) => {
   const [isArticleEditModalOpen, setIsArticleEditModalOpen] = useState(false);
 
 
-  const imageUrl = `http://localhost:4000/images/${articles.item.image}`;
+  const imageUrl = `https://blog-app-niyl.onrender.com/images/${articles.item.image}`;
 
 
 
