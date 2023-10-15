@@ -31,6 +31,16 @@ export const getAllAricles = async(req,res)=>{
     }
 }
 
+export const getSingleArticle = async(req,res)=>{
+    try {
+        const article = await Article.findById(req.params.id);
+        res.send(article);
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 export const updateArticle = async(req, res) => {
     try {
         const updateArticle = await Article.findByIdAndUpdate(req.params.id, {$set:req.body}, {new:true});
